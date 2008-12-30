@@ -1,13 +1,18 @@
 Summary
 =======
 
-Introduction goes here.
+This is a simple plugin that generates introduction text from a long text, it will always break the text at the end of the last word near to the limit you informed as argument.
 
 
 Example
 =======
 
-Example goes here.
+@page.body.summary 100
 
+Full Body
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-Copyright (c) 2008 [name of plugin creator], released under the MIT license
+Summary Body
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...
+
+Copyright (c) 2008 [Philipe Casarotte], released under the MIT license
