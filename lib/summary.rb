@@ -4,3 +4,5 @@ $:.unshift(File.dirname(__FILE__)) unless
 module Summary
   VERSION = '0.1'
 end
+
+require 'summary/summary'
