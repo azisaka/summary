@@ -1,10 +1,10 @@
 = summary
 
-== DESCRIPTION:
+== Description:
 
 This is a simple plugin that generates introduction text from a long text, it will always break the text at the end of the last word near to the limit you informed as argument.
 
-== SYNOPSIS:
+== Synopsis
 
   text = <<-TEXT
     Cras eleifend sodales sem. Ut nec metus. Nulla sed nisl. 
@@ -19,16 +19,27 @@ This is a simple plugin that generates introduction text from a long text, it wi
   text.summary # Cras eleifend sodales sem. Ut nec metus. Nulla sed nisl. Praesent malesuada dui rhoncus quam...
   text.summary(50) # Cras eleifend sodales sem. Ut nec metus. Nulla...
 
-== REQUIREMENTS:
+== Requirements
 
 * Ruby =D
 
-== INSTALL:
+== Install
+
+=== as Gem
 
   gem sources -a http://gems.github.com
   sudo gem install dookie-summary
 
-== LICENSE:
+=== as Ruby on Rails plugin
+
+  script/plugin install git://github.com/dookie/summary.git
+
+== Collaborators
+
+* Bruno Azisaka Maciel (dookie) [http://pogonrails.com]
+* Marcio Trindade [http://marciotrindade.com]
+
+== License
 
 (The MIT License)
 
