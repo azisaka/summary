@@ -1,7 +1,9 @@
 class String
   def summary(size=100)
-	  text = ApplicationController.helpers.strip_tags(self).strip
-  	text = text[0...text[0..(size-3)].rindex(' ')] + "..." if text.size > size
+	  pure = self.strip.gsub(/<(.|\n)+?>|(\t|\n|\r)+/,'')
+	  pure = pure.gsub(/\s+/,' ')
+  	text = pure[0...pure[0..(size-3)].rindex(' ')]
+  	text = text.gsub(/\.$/,'') + "..." if pure.size > size
   	text
   end
 end
