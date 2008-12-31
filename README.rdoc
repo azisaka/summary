@@ -6,14 +6,22 @@ This is a simple plugin that generates introduction text from a long text, it wi
 
 == SYNOPSIS:
 
-  text = 'Cras eleifend sodales sem. Ut nec metus. Nulla sed nisl. Praesent malesuada dui rhoncus quam. Aliquam ultricies. Praesent commodo. Nam nec pede. Pellentesque egestas, urna vel accumsan venenatis, mi metus sagittis augue, sed hendrerit nunc felis eget neque. Fusce vel massa. Quisque ligula enim, tempor sed, lacinia non, malesuada ac, enim. Curabitur at enim scelerisque neque egestas luctus. Mauris lacinia varius diam.'
+  text = <<-TEXT
+    Cras eleifend sodales sem. Ut nec metus. Nulla sed nisl. 
+  Praesent malesuada dui rhoncus quam. Aliquam ultricies. Praesent commodo. 
+  
+    Nam nec pede. Pellentesque egestas, urna vel accumsan venenatis, mi metus sagittis augue, 
+  sed hendrerit nunc felis eget neque. Fusce vel massa. Quisque ligula enim, 
+  tempor sed, lacinia non, malesuada ac, enim. Curabitur at enim scelerisque 
+  neque egestas luctus. Mauris lacinia varius diam.'
+  TEXT
   
   text.summary # Cras eleifend sodales sem. Ut nec metus. Nulla sed nisl. Praesent malesuada dui rhoncus quam...
   text.summary(50) # Cras eleifend sodales sem. Ut nec metus. Nulla...
 
 == REQUIREMENTS:
 
-  * Ruby =D
+* Ruby =D
 
 == INSTALL:
 
