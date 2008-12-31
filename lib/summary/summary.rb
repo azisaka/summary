@@ -1,5 +1,13 @@
 module Summary
   module String
+    # This method sanitizes the string removing html tags, \t \n \r characters, and duplicated blank spaces.
+    # To use it just do:
+    # 
+    #   your_string.summary
+    #
+    # or
+    #
+    #   your_string.summary(size)
     def summary(size=100)
   	  pure = self.strip.gsub(/<(.|\n)+?>|(\t|\n|\r)+/,'')
   	  pure = pure.gsub(/\s+/,' ')
