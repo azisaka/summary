@@ -25,7 +25,8 @@ This is a simple plugin that generates introduction text from a long text, it wi
 
 == INSTALL:
 
-  sudo gem install summary
+  gem sources -a http://gems.github.com
+  sudo gem install dookie-summary
 
 == LICENSE:
 
