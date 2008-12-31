@@ -1,3 +1,8 @@
+== 0.2 2008-12-31
+
+* 1 major enhancement:
+  * Adding the support as Ruby on Rails plugin
+
 == 0.1 2008-12-31
 
 * 1 major enhancement:
