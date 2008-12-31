@@ -3,3 +3,4 @@ Manifest.txt
 README.rdoc
 Rakefile
 lib/summary.rb
+lib/summary/summary.rb
