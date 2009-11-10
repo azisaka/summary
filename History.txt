@@ -1,3 +1,13 @@
+== 0.5.0 2009-11-10
+
+* 2 major enhancements:
+  * Added support for specific terminator (including html)
+  * Replaced the test units to Rspec specs.
+
+* 1 minor enhancement:
+  * Now the summary method builds an object Summarize
+  * Better support for versioning (MAJOR, TINY, PATCH constants)
+
 == 0.2 2008-12-31
 
 * 1 major enhancement:

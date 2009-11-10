@@ -1,8 +1,11 @@
-$:.unshift(File.dirname(__FILE__)) unless
-  $:.include?(File.dirname(__FILE__)) || $:.include?(File.expand_path(File.dirname(__FILE__)))
+require 'rubygems'
+require 'activesupport'
 
 module Summary
-  VERSION = '0.2'
+  MAJOR = '0'
+  TINY = '5'
+  PATCH = '0'
+  VERSION = [MAJOR, TINY, PATCH] * '.'
 end
 
-require 'summary/summary'
+require File.dirname(__FILE__) + '/summary/summary'

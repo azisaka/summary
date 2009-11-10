@@ -7,36 +7,34 @@ This is a simple plugin that generates introduction text from a long text, it wi
 == Synopsis
 
   text = <<-TEXT
-    Cras eleifend sodales sem. Ut nec metus. Nulla sed nisl. 
-  Praesent malesuada dui rhoncus quam. Aliquam ultricies. Praesent commodo. 
-  
-    Nam nec pede. Pellentesque egestas, urna vel accumsan venenatis, mi metus sagittis augue, 
-  sed hendrerit nunc felis eget neque. Fusce vel massa. Quisque ligula enim, 
-  tempor sed, lacinia non, malesuada ac, enim. Curabitur at enim scelerisque 
+    Cras eleifend sodales sem. Ut nec metus. Nulla sed nisl.
+  Praesent malesuada dui rhoncus quam. Aliquam ultricies. Praesent commodo.
+
+    Nam nec pede. Pellentesque egestas, urna vel accumsan venenatis, mi metus sagittis augue,
+  sed hendrerit nunc felis eget neque. Fusce vel massa. Quisque ligula enim,
+  tempor sed, lacinia non, malesuada ac, enim. Curabitur at enim scelerisque
   neque egestas luctus. Mauris lacinia varius diam.'
   TEXT
-  
+
   text.summary # Cras eleifend sodales sem. Ut nec metus. Nulla sed nisl. Praesent malesuada dui rhoncus quam...
   text.summary(50) # Cras eleifend sodales sem. Ut nec metus. Nulla...
+  text.summary(50, ' :)') # Cras eleifend sodales sem. Ut nec metus. Nulla :)
+  text.summary(50, '... <a href="/page.html">read more</a>') # Cras eleifend sodales sem. Ut nec... <a href="/page.html">read more</a>
 
 == Requirements
 
 * Ruby =D
+* ActiveSupport
 
 == Install
 
-=== as Gem
-
-  gem sources -a http://gems.github.com
-  sudo gem install dookie-summary
-
 === as Ruby on Rails plugin
 
-  script/plugin install git://github.com/dookie/summary.git
+  script/plugin install git://github.com/azisaka/summary.git
 
 == Collaborators
 
-* Bruno Azisaka Maciel (dookie) [http://pogonrails.com]
+* Bruno Azisaka Maciel
 * Marcio Trindade [http://marciotrindade.com]
 
 == License
