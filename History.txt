@@ -1,3 +1,8 @@
+== 0.6.0 2010-06-20
+
+* Code review
+* Removed ActiveSupport dependence
+
 == 0.5.0 2009-11-10
 
 * 2 major enhancements:
