@@ -1,4 +1,4 @@
-= summary
+= Summary
 
 == Description:
 
@@ -23,8 +23,7 @@ This is a simple plugin that generates introduction text from a long text, it wi
 
 == Requirements
 
-* Ruby =D
-* ActiveSupport
+* Ruby
 
 == Install
 
