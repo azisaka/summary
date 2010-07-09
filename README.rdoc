@@ -30,6 +30,10 @@ This is a simple gem that generates introduction text from a long text, it will 
 === as Ruby on Rails plugin
 
   script/plugin install git://github.com/azisaka/summary.git
+  
+=== as a Gem
+
+  gem install summary
 
 == Collaborators
 

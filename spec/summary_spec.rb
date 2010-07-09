@@ -1,11 +1,5 @@
 require File.expand_path('spec_helper', File.dirname(__FILE__))
 
-describe Summary do
-  it 'should be version 0.6.1' do
-    subject::VERSION.should == '0.6.1'
-  end
-end
-
 describe Summary, 'on plain text' do
   before do
     @text = 'Cras eleifend sodales sem. Ut nec metus. Nulla sed nisl. Praesent malesuada dui rhoncus quam. Aliquam ultricies. Praesent commodo. Nam nec pede. Pellentesque egestas, urna vel accumsan venenatis, mi metus sagittis augue, sed hendrerit nunc felis eget neque. Fusce vel massa. Quisque ligula enim, tempor sed, lacinia non, malesuada ac, enim. Curabitur at enim scelerisque neque egestas luctus. Mauris lacinia varius diam.'
