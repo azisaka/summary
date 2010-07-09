@@ -33,14 +33,15 @@ This is a simple gem that generates introduction text from a long text, it will 
 
 == Collaborators
 
-* Bruno Azisaka Maciel
+* Bruno Azisaka Maciel [http://azisaka.com.br]
 * Marcio Trindade [http://marciotrindade.com]
+* Philipe Casarotte (the first author)
 
 == License
 
 (The MIT License)
 
-Copyright (c) 2008 Philipe Casarotte
+Copyright (c) 2010 Bruno Azisaka Maciel
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

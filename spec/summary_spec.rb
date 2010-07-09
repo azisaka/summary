@@ -1,8 +1,8 @@
 require File.expand_path('spec_helper', File.dirname(__FILE__))
 
 describe Summary do
-  it 'should be version 0.6.0' do
-    subject::VERSION.should == '0.6.0'
+  it 'should be version 0.6.1' do
+    subject::VERSION.should == '0.6.1'
   end
 end
 
