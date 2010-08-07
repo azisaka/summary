@@ -34,7 +34,7 @@ module Summary
     end
 
     # Checks the need of "summarize" the string. When it is needed, the string is splitted.
-    # Then the last dot is removed and the separator and terminator are pushed into the resultant string.
+    # Then the last dot is removed and the terminator is pushed into the resultant string.
     def summary
       if pure.size > @size
       	@text = pure[0...pure[0..(@size-backspace)].rindex(' ')]
