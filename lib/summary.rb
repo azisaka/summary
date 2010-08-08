@@ -38,21 +38,31 @@ module Summary
     def summary
       return pure if pure.size < @size or pure !~ /\s/
       
-  	  @text = pure[0...pure[0..(@size-backspace)].rindex(' ')]
-  	  @text.gsub(/\.$/,'') + @terminator
+      limit = pure[0..(@size-backspace)].rindex(' ')
+      
+      if limit >= purify(@terminator).size
+  	    text = pure[0...limit]
+  	    text = text.gsub(/\.$/,'') + @terminator
+      else
+        pure
+      end
     end
 
     protected
     # It cleans up the text removing the html tags, break lines and white spaces
     def pure
-      @pure ||= @text.strip.gsub(/<(.|\n)+?>|(\t|\n|\r)+/,'').gsub(/\s+/,' ')
+      @pure ||= purify @text
+    end
+    
+    def purify(string)
+      string.strip.gsub(/<(.|\n)+?>|(\t|\n|\r)+/,'').gsub(/\s+/,' ')
     end
 
     # Measures the space needed by the terminator.
     # Let's say you want a string with 50 chars, and your terminator is a '...'.
     # That means your string can only have 47 chars + 3 chars from your terminator.
     def backspace
-      (@terminator =~ /<(.|\n)+?>/ ? @terminator.gsub(/<(.|\n)+?>/,'') : @terminator).size
+      (@terminator =~ /<(.|\n)+?>/ ? purify(@terminator) : @terminator).size
     end
   end
 end

@@ -34,7 +34,7 @@ describe Summary, 'on plain text' do
   end
 end
 
-describe Summary, "when the string is thin" do
+describe Summary, "when the string is a word" do
   before do
     @text = "test"
   end
@@ -43,6 +43,16 @@ describe Summary, "when the string is thin" do
     it "should not summarize the string" do
       @text.summary(2).should == @text
     end
+  end
+end
+
+describe Summary, "when the terminator is bigger" do
+  before do
+    @text = "test test"
+  end
+  
+  it "should not summarize the string" do
+    @text.summary(4, '.' * 5).should == @text
   end
 end
 
