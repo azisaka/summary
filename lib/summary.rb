@@ -36,16 +36,10 @@ module Summary
     # Checks the need of "summarize" the string. When it is needed, the string is splitted.
     # Then the last dot is removed and the terminator is pushed into the resultant string.
     def summary
-      return pure if pure.size < @size or pure !~ /\s/
-      
-      limit = pure[0..(@size-backspace)].rindex(' ')
-      
-      if limit >= purify(@terminator).size
-  	    text = pure[0...limit]
-  	    text = text.gsub(/\.$/,'') + @terminator
-      else
-        pure
-      end
+      return pure unless summarizable?
+
+  	  text = pure[0...string_limit]
+  	  text = text.gsub(/\.$/,'') + @terminator
     end
 
     protected
@@ -54,8 +48,19 @@ module Summary
       @pure ||= purify @text
     end
     
+    # Cleans up any string removing the html tags, break lines and white spaces.
     def purify(string)
       string.strip.gsub(/<(.|\n)+?>|(\t|\n|\r)+/,'').gsub(/\s+/,' ')
+    end
+    
+    # Calculates the size limit to summarize the string.
+    def string_limit
+      @string_limit ||= pure[0..(@size-backspace)].rindex(' ')
+    end
+    
+    # Verifies if the string can be summarized.
+    def summarizable?
+      pure.size > @size and pure =~ /\s/ and string_limit >= purify(@terminator).size
     end
 
     # Measures the space needed by the terminator.
