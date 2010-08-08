@@ -1,7 +1,7 @@
 module Summary
   MAJOR = '0'
   TINY = '6'
-  PATCH = '2'
+  PATCH = '3'
   VERSION = [MAJOR, TINY, PATCH] * '.'
   
   module String
@@ -36,12 +36,10 @@ module Summary
     # Checks the need of "summarize" the string. When it is needed, the string is splitted.
     # Then the last dot is removed and the terminator is pushed into the resultant string.
     def summary
-      if pure.size > @size
-      	@text = pure[0...pure[0..(@size-backspace)].rindex(' ')]
-      	@text.gsub(/\.$/,'') + @terminator
-      else
-        pure
-    	end
+      return pure if pure.size < @size or pure !~ /\s/
+      
+  	  @text = pure[0...pure[0..(@size-backspace)].rindex(' ')]
+  	  @text.gsub(/\.$/,'') + @terminator
     end
 
     protected

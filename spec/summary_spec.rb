@@ -34,6 +34,17 @@ describe Summary, 'on plain text' do
   end
 end
 
+describe Summary, "when the string is thin" do
+  before do
+    @text = "test"
+  end
+  
+  context "when the summary size is lower than the string size" do
+    it "should not summarize the string" do
+      @text.summary(2).should == @text
+    end
+  end
+end
 
 describe Summary, 'on html' do
   before do
