@@ -1,7 +1,7 @@
 module Summary
   MAJOR = '0'
   TINY = '6'
-  PATCH = '5'
+  PATCH = '6'
   VERSION = [MAJOR, TINY, PATCH] * '.'
   
   module String
@@ -28,9 +28,7 @@ module Summary
 
   class Summarize
     def initialize(text, size = 100, terminator = '...')
-      @text = text
-      @size = size
-      @terminator = terminator
+      @text, @size, @terminator = text, size, terminator
     end
 
     # Checks the need of "summarize" the string. When it is needed, the string is splitted.
@@ -38,8 +36,7 @@ module Summary
     def summary
       return pure unless summarizable?
 
-  	  text = pure[0...string_limit]
-  	  text = text.gsub(/\.$/,'') + @terminator
+      pure[0...string_limit].gsub(/\.$/,'') + @terminator
     end
 
     protected
@@ -50,24 +47,24 @@ module Summary
     
     # Cleans up any string removing the html tags, break lines and white spaces.
     def purify(string)
-      string.strip.gsub(/<(.|\n)+?>|(\t|\n|\r)+/,'').gsub(/\s+/,' ')
+      string.gsub(/(^\s+)|<(.|\n)+?>|(\t|\n|\r)+/,'').gsub(/\s+/,' ')
     end
     
     # Calculates the size limit to summarize the string.
     def string_limit
-      @string_limit ||= pure[0..(@size-backspace)].rindex(' ')
+      @string_limit ||= pure[0..(@size - backspace)].rindex(' ')
     end
     
     # Verifies if the string can be summarized.
     def summarizable?
-      pure.size > @size and pure =~ /\s/ and string_limit >= purify(@terminator).size
+      pure.size > @size and pure =~ /\s/ and string_limit >= backspace
     end
 
     # Measures the space needed by the terminator.
     # Let's say you want a string with 50 chars, and your terminator is a '...'.
     # That means your string can only have 47 chars + 3 chars from your terminator.
     def backspace
-      (@terminator =~ /<(.|\n)+?>/ ? purify(@terminator) : @terminator).size
+      @backspace ||= purify(@terminator).size
     end
   end
 end

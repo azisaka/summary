@@ -1,3 +1,5 @@
+v0.6.6. Refactoring
+
 v0.6.5. Code improvements and docs
 
 v0.6.4. [Fix #2] If the strings are smaller than the terminator it should not be applied
