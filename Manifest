@@ -1,9 +1,0 @@
-CHANGELOG
-Manifest
-README.rdoc
-Rakefile
-lib/summary.rb
-rails/init.rb
-spec/spec_helper.rb
-spec/summary_spec.rb
-summary.gemspec
