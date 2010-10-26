@@ -1,7 +1,7 @@
 module Summary
   MAJOR = '0'
-  TINY = '6'
-  PATCH = '6'
+  TINY = '7'
+  PATCH = '0'
   VERSION = [MAJOR, TINY, PATCH] * '.'
   
   module String
