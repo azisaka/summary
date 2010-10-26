@@ -36,7 +36,7 @@ module Summary
     def summary
       return pure unless summarizable?
 
-      pure[0...string_limit].gsub(/\.$/,'') + @terminator
+      pure[0...string_limit].sub(/\.$/,'') + @terminator
     end
 
     protected
@@ -47,7 +47,7 @@ module Summary
     
     # Cleans up any string removing the html tags, break lines and white spaces.
     def purify(string)
-      string.gsub(/(^\s+)|<(.|\n)+?>|(\t|\n|\r)+/,'').gsub(/\s+/,' ')
+      string.gsub(/(^\s+)|<(.|\n)+?>|(\t|\n|\r)+/,'').sub(/\s+/,' ')
     end
     
     # Calculates the size limit to summarize the string.
