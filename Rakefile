@@ -1,5 +1,4 @@
 require 'echoe'
-
 	 	
 Echoe.new('summary') do |p| 	
   p.project = 'summary'
