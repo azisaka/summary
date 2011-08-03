@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 require File.expand_path("../../spec_helper", __FILE__)
 
 describe 'Summary on plain text' do
@@ -226,6 +227,30 @@ describe 'Summary with different terminators' do
       it "should have 50 chars" do
         assert_summary_to @summarized, 50
       end
+    end
+  end
+end
+
+describe "Summary with accents" do
+  before do
+    @text = 'Cras eleifend sodãles sëm. Ut nec metus. Nullá sêd nisl.'
+  end
+  
+  describe "limited to 20 chars" do    
+    it "should break the text" do
+      assert_equal 'Cras eleifend', @text.summary(20,'')
+    end
+  end
+  
+  describe "limited to 25 chars" do    
+    it "should break the text" do
+      assert_equal 'Cras eleifend sodãles', @text.summary(25,'')
+    end
+  end
+  
+  describe "limited to 30 chars" do    
+    it "should break the text" do
+      assert_equal 'Cras eleifend sodãles sëm. Ut', @text.summary(30,'')
     end
   end
 end
