@@ -4,12 +4,13 @@ PATH
     summary (0.7.3)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
-    minitest (2.3.1)
-    rake (0.8.7)
+    minitest (5.0.2)
+    rake (10.0.4)
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES
