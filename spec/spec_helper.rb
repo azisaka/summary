@@ -1,7 +1,5 @@
-require 'rubygems'
-require 'minitest/spec'
-
-MiniTest::Unit.autorun
+require 'minitest/autorun'
+MiniTest.autorun
 
 require File.dirname(__FILE__) + '/../lib/summary'
 
