@@ -1,4 +1,5 @@
 .DS_Store
 .rake_tasks~
+coverage
 pkg
 doc

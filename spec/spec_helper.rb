@@ -1,4 +1,7 @@
 require 'minitest/autorun'
+require 'coveralls'
+Coveralls.wear!
+
 MiniTest.autorun
 
 require File.dirname(__FILE__) + '/../lib/summary'
